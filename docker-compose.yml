@@ -1,0 +1,15 @@
+services:
+  monitor:
+    build: ./app
+    restart: "no"
+    volumes:
+      - ./reports:/tmp
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/usr/share/nginx/html
+    depends_on:
+      - monitor

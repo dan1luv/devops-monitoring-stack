@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-26 08:39:28",
+  "results": [
+    {
+      "url": "https://google.com",
+      "status": "ok"
+    },
+    {
+      "url": "https://github.com",
+      "status": "ok"
+    },
+    {
+      "url": "https://anthropic.com",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://httpstat.us/500",
+      "status": "error",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+    }
+  ]
+}

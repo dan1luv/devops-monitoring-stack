@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: site-monitor
+spec:
+  template:
+    spec:
+      containers:
+      - name: monitor
+        image: dan1luv/devops-monitor:v2
+      restartPolicy: Never
+  backoffLimit: 0
