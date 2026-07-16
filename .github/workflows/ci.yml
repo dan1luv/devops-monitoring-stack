@@ -44,3 +44,14 @@ jobs:
           context: ./app
           push: true
           tags: dan1luv/devops-monitor:latest
+
+
+  deploy:
+      runs-on: self-hosted
+      needs: build-and-push
+      steps:
+        - name: Pull and restart
+          run: |
+            docker compose -f ~/devops-monitoring-stack/docker-compose.yml down
+            docker compose -f ~/devops-monitoring-stack/docker-compose.yml pull
+            docker compose -f ~/devops-monitoring-stack/docker-compose.yml up -d
