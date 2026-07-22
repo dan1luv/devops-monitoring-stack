@@ -13,3 +13,12 @@ services:
       - ./web:/usr/share/nginx/html
     depends_on:
       - monitor
+
+  redis:
+   image: redis:alpine
+   restart: always
+   volumes:
+    - redis-data:/data
+
+volumes:
+ redis-data:
