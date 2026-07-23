@@ -21,5 +21,3 @@
 - nginx reverse proxy
 - GitHub Actions CI/CD
 - Self-hosted runner
-
-тестовая запись
